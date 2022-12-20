@@ -12,8 +12,7 @@ pub fn part1() -> i32 {
 pub fn part2() -> i32 {
     count_calories()
         .into_iter()
-        .sorted()
-        .rev()
+        .sorted_by(|a, b| b.cmp(a))
         .take(3)
         .sum()
 }
