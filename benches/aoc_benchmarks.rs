@@ -77,6 +77,14 @@ pub fn day_8_part_2(c: &mut Criterion) {
     c.bench_function("Day 8 Part 2", |b| b.iter(|| day8::part2()));
 }
 
+pub fn day_9_part_1(c: &mut Criterion) {
+    c.bench_function("Day 9 Part 1", |b| b.iter(|| day9::part1()));
+}
+
+pub fn day_9_part_2(c: &mut Criterion) {
+    c.bench_function("Day 9 Part 2", |b| b.iter(|| day9::part2()));
+}
+
 criterion_group!(day_1, day_1_part_1, day_1_part_2);
 
 criterion_group!(day_2, day_2_part_1, day_2_part_2, day_2_part_1_lookup, day_2_part_2_lookup);
@@ -93,4 +101,6 @@ criterion_group!(day_7, day_7_part_1, day_7_part_2);
 
 criterion_group!(day_8, day_8_part_1, day_8_part_2);
 
-criterion_main!(day_1, day_2, day_3, day_4, day_5, day_6, day_7, day_8);
+criterion_group!(day_9, day_9_part_1, day_9_part_2);
+
+criterion_main!(day_1, day_2, day_3, day_4, day_5, day_6, day_7, day_8, day_9);
